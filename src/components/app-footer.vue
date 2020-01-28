@@ -1,7 +1,7 @@
 <template >
     <div class="footer">
 		<footer>
-			<div id="app" class="content-end tingg-gradient font-medium">
+			<div id="app" class="content-end tingg-gradient font-medium ">
 				<section class="bg-white py-8 w-full">
 					<div class="container mx-auto px-8">
 						<div class="table w-full">
