@@ -25,7 +25,7 @@
 
 <script>
 import axios from 'axios'
-import app_imageCards from './app-imageCards'
+// import app_imageCards from './app-imageCards'
 
 export default {
     api_key: 'f56c34a04ed146a68150e8856ce7190e',//api key
