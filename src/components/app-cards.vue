@@ -3,259 +3,70 @@
        <div class="container my-12 mx-auto px-4 md:px-12">
            <p class="flex-auto text-4xl text-center m-2 ">
                 Trending Groups
+            </p>     
+        </div>
+        <div>
+            <form class="flex-auto text-md text-center m-2 ">
+                <label>
+                    Search:
+                    <input v-model="tag" type="text" class=" border-2">
+                </label>
+                <button type="submit" class="go-button " @click.prevent="search">Search</button>
+            </form>
+            <p v-if="loading">
+                Loading...
             </p>
-
-        <div class="flex flex-wrap -mx-1 lg:-mx-4">
-            
-            <!-- Column -->
-            <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
-            
-
-                <!-- Article -->
-                <article class="overflow-hidden rounded-lg shadow-lg">
-
-                    <a href="#">
-                        <img alt="Placeholder" class="block h-auto w-full" src="https://picsum.photos/600/400/?random">
-                    </a>
-
-                    <header class="flex items-center justify-between leading-tight p-2 md:p-4">
-                        <h1 class="text-lg">
-                            <a class="no-underline hover:underline text-black" href="#">
-                                Article Title
-                            </a>
-                        </h1>
-                        <p class="text-grey-darker text-sm">
-                            14/4/19
-                        </p>
-                    </header>
-
-                    <footer class="flex items-center justify-between leading-none p-2 md:p-4">
-                        <a class="flex items-center no-underline hover:underline text-black" href="#">
-                            <img alt="Placeholder" class="block rounded-full" src="https://picsum.photos/32/32/?random">
-                            <p class="ml-2 text-sm">
-                                Author Name
-                            </p>
-                        </a>
-                        <a class="no-underline text-grey-darker hover:text-red-dark" href="#">
-                            <span class="hidden">Like</span>
-                            <i class="fa fa-heart"></i>
-                        </a>
-                    </footer>
-
-                </article>
-                <!-- END Article -->
-
-            </div>
-            <!-- END Column -->
-
-            <!-- Column -->
-            <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
-
-                <!-- Article -->
-                <article class="overflow-hidden rounded-lg shadow-lg">
-
-                    <a href="#">
-                        <img alt="Placeholder" class="block h-auto w-full" src="https://picsum.photos/600/400/?random">
-                    </a>
-
-                    <header class="flex items-center justify-between leading-tight p-2 md:p-4">
-                        <h1 class="text-lg">
-                            <a class="no-underline hover:underline text-black" href="#">
-                                Article Title
-                            </a>
-                        </h1>
-                        <p class="text-grey-darker text-sm">
-                            14/4/19
-                        </p>
-                    </header>
-
-                    <footer class="flex items-center justify-between leading-none p-2 md:p-4">
-                        <a class="flex items-center no-underline hover:underline text-black" href="#">
-                            <img alt="Placeholder" class="block rounded-full" src="https://picsum.photos/32/32/?random">
-                            <p class="ml-2 text-sm">
-                                Author Name
-                            </p>
-                        </a>
-                        <a class="no-underline text-grey-darker hover:text-red-dark" href="#">
-                            <span class="hidden">Like</span>
-                            <i class="fa fa-heart"></i>
-                        </a>
-                    </footer>
-
-                </article>
-                <!-- END Article -->
-
-            </div>
-            <!-- END Column -->
-
-            <!-- Column -->
-            <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
-
-                <!-- Article -->
-                <article class="overflow-hidden rounded-lg shadow-lg">
-
-                    <a href="#">
-                        <img alt="Placeholder" class="block h-auto w-full" src="https://picsum.photos/600/400/?random">
-                    </a>
-
-                    <header class="flex items-center justify-between leading-tight p-2 md:p-4">
-                        <h1 class="text-lg">
-                            <a class="no-underline hover:underline text-black" href="#">
-                                Article Title
-                            </a>
-                        </h1>
-                        <p class="text-grey-darker text-sm">
-                            14/4/19
-                        </p>
-                    </header>
-
-                    <footer class="flex items-center justify-between leading-none p-2 md:p-4">
-                        <a class="flex items-center no-underline hover:underline text-black" href="#">
-                            <img alt="Placeholder" class="block rounded-full" src="https://picsum.photos/32/32/?random">
-                            <p class="ml-2 text-sm">
-                                Author Name
-                            </p>
-                        </a>
-                        <a class="no-underline text-grey-darker hover:text-red-dark" href="#">
-                            <span class="hidden">Like</span>
-                            <i class="fa fa-heart"></i>
-                        </a>
-                    </footer>
-
-                </article>
-                <!-- END Article -->
-
-            </div>
-            <!-- END Column -->
-
-            <!-- Column -->
-            <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
-
-                <!-- Article -->
-                <article class="overflow-hidden rounded-lg shadow-lg">
-
-                    <a href="#">
-                        <img alt="Placeholder" class="block h-auto w-full" src="https://picsum.photos/600/400/?random">
-                    </a>
-
-                    <header class="flex items-center justify-between leading-tight p-2 md:p-4">
-                        <h1 class="text-lg">
-                            <a class="no-underline hover:underline text-black" href="#">
-                                Article Title
-                            </a>
-                        </h1>
-                        <p class="text-grey-darker text-sm">
-                            14/4/19
-                        </p>
-                    </header>
-
-                    <footer class="flex items-center justify-between leading-none p-2 md:p-4">
-                        <a class="flex items-center no-underline hover:underline text-black" href="#">
-                            <img alt="Placeholder" class="block rounded-full" src="https://picsum.photos/32/32/?random">
-                            <p class="ml-2 text-sm">
-                                Author Name
-                            </p>
-                        </a>
-                        <a class="no-underline text-grey-darker hover:text-red-dark" href="#">
-                            <span class="hidden">Like</span>
-                            <i class="fa fa-heart"></i>
-                        </a>
-                    </footer>
-
-                </article>
-                <!-- END Article -->
-
-            </div>
-            <!-- END Column -->
-
-            <!-- Column -->
-            <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
-
-                <!-- Article -->
-                <article class="overflow-hidden rounded-lg shadow-lg">
-
-                    <a href="#">
-                        <img alt="Placeholder" class="block h-auto w-full" src="https://picsum.photos/600/400/?random">
-                    </a>
-
-                    <header class="flex items-center justify-between leading-tight p-2 md:p-4">
-                        <h1 class="text-lg">
-                            <a class="no-underline hover:underline text-black" href="#">
-                                Article Title
-                            </a>
-                        </h1>
-                        <p class="text-grey-darker text-sm">
-                            14/4/19
-                        </p>
-                    </header>
-
-                    <footer class="flex items-center justify-between leading-none p-2 md:p-4">
-                        <a class="flex items-center no-underline hover:underline text-black" href="#">
-                            <img alt="Placeholder" class="block rounded-full" src="https://picsum.photos/32/32/?random">
-                            <p class="ml-2 text-sm">
-                                Author Name
-                            </p>
-                        </a>
-                        <a class="no-underline text-grey-darker hover:text-red-dark" href="#">
-                            <span class="hidden">Like</span>
-                            <i class="fa fa-heart"></i>
-                        </a>
-                    </footer>
-
-                </article>
-                <!-- END Article -->
-
-            </div>
-            <!-- END Column -->
-
-            <!-- Column -->
-            <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
-
-                <!-- Article -->
-                <article class="overflow-hidden rounded-lg shadow-lg">
-
-                    <a href="#">
-                        <img alt="Placeholder" class="block h-auto w-full" src="https://picsum.photos/600/400/?random">
-                    </a>
-
-                    <header class="flex items-center justify-between leading-tight p-2 md:p-4">
-                        <h1 class="text-lg">
-                            <a class="no-underline hover:underline text-black" href="#">
-                                Article Title
-                            </a>
-                        </h1>
-                        <p class="text-grey-darker text-sm">
-                            14/4/19
-                        </p>
-                    </header>
-
-                    <footer class="flex items-center justify-between leading-none p-2 md:p-4">
-                        <a class="flex items-center no-underline hover:underline text-black" href="#">
-                            <img alt="Placeholder" class="block rounded-full" src="https://picsum.photos/32/32/?random">
-                            <p class="ml-2 text-sm">
-                                Author Name
-                            </p>
-                        </a>
-                        <a class="no-underline text-grey-darker hover:text-red-dark" href="#">
-                            <span class="hidden">Like</span>
-                            <i class="fa fa-heart"></i>
-                        </a>
-                    </footer>
-                </article>
-                <!-- END Article -->
-            </div>
-            <!-- END Column -->
-            </div>
+            <ul v-else >
+                <li v-for="image in images" :key="image.id" class=" list-inside">{{image}}</li>
+            </ul>
         </div>
     </div>
 </template>
 
 <script>
+import axios from 'axios'
+import app_imageCards from './app-imageCards'
+
 export default {
-  name: 'app_cards',
-  props: {
-    msg: String
-  }
+    api_key: 'f56c34a04ed146a68150e8856ce7190e',//api key
+    name: 'app_cards',
+
+    data: function() {
+        return {
+            loading: false,
+            tag: '',
+            images: []
+            }
+        },
+        methods: {
+            search() {
+            this.loading = true;
+            this.fetchImages()
+                .then((response) => {
+                this.images = response.data.photos.photo;
+                this.loading = false;
+                })
+            },
+            fetchImages() {
+            return axios({
+                method: 'get',
+                url: 'https://api.flickr.com/services/rest',
+                params: {
+                method: 'flickr.photos.search',
+                api_key: 'f56c34a04ed146a68150e8856ce7190e',
+                tags: this.tag,
+                extras: 'url_n, owner_name, date_taken, views',
+                page: 1,
+                format: 'json',
+                nojsoncallback: 1,
+                per_page: 30,
+                }
+            })
+    },
+    props: {
+        msg: String
+    },
+}
 }
 </script>
 <style scoped>
