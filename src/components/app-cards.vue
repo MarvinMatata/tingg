@@ -17,7 +17,10 @@
                 Loading...
             </p>
             <ul v-else >
-                <li v-for="image in images" :key="image.id" class=" list-inside">{{image}}</li>
+                <image-card
+                    v-for="image in images"
+                    :key="image.id"
+                    :image="image" />
             </ul>
         </div>
     </div>
@@ -25,8 +28,6 @@
 
 <script>
 import axios from 'axios'
-// import app_imageCards from './app-imageCards'
-
 export default {
     api_key: 'f56c34a04ed146a68150e8856ce7190e',//api key
     name: 'app_cards',

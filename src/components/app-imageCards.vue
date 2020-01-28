@@ -1,6 +1,6 @@
 <template>
   <li>
-    <img :src="image.url_n" :alt="image.title">
+    <img :src="image.id" :alt="image.title">
     <div>
       <p v-if="image.title">{{image.title}}</p>
       <p v-else>No Title Found</p>
@@ -20,3 +20,7 @@ export default {
   props: [ 'image' ]
 }
 </script>
+<style scoped>
+
+</style>>
+
