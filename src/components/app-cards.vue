@@ -17,10 +17,7 @@
                 Loading...
             </p>
             <ul v-else >
-                <image-card
-                    v-for="image in images"
-                    :key="image.id"
-                    :image="image" />
+                <li v-for="image in images" :key="image.id" class=" list-inside">{{image}}</li>
             </ul>
         </div>
     </div>
