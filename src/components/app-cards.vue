@@ -16,9 +16,25 @@
             <p v-if="loading">
                 Loading...
             </p>
-            <ul v-else >
-                <li v-for="image in images" :key="image.id" class=" list-inside">{{image}}</li>
-            </ul>
+            <ul v-else>
+                <ImageCard
+                    v-for="image in images"
+                    :key="image.id"
+                    :image="image" />
+                
+                <li v-for="image in images" :key="image.id">
+                    <img :src="image.url_n" :alt="image.title">
+                    <div>
+                    <p v-if="image.title">{{image.title}}</p>
+                    <p v-else>No Title Found</p>
+                    <p>By {{image.ownername}}</p>
+                    <section>
+                        <p>{{image.datetaken}}</p>
+                        <p>Views: {{image.views}}</p>
+                    </section>
+                    </div>
+                </li>
+                </ul>
         </div>
     </div>
 </template>
@@ -26,7 +42,6 @@
 <script>
 import axios from 'axios'
 export default {
-    api_key: 'f56c34a04ed146a68150e8856ce7190e',//api key
     name: 'app_cards',
 
     data: function() {
