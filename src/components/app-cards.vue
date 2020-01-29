@@ -16,20 +16,20 @@
             <p v-if="loading">
                 Loading...
             </p>
-            <ul v-else>
+            <ul v-else >
                 <ImageCard
                     v-for="image in images"
                     :key="image.id"
                     :image="image" />
                 
-                <li v-for="image in images" :key="image.id">
+                <li  class="text-sm inline-block m-4 font-medium p-8 items-center border-2 rounded-lg shadow-2xl object-center  " v-for="image in images" :key="image.id" >
                     <img :src="image.url_n" :alt="image.title">
                     <div>
                     <p v-if="image.title">{{image.title}}</p>
                     <p v-else>No Title Found</p>
                     <p>By {{image.ownername}}</p>
                     <section>
-                        <p>{{image.datetaken}}</p>
+                        <p>Date Taken: {{image.datetaken}}</p>
                         <p>Views: {{image.views}}</p>
                     </section>
                     </div>
